@@ -8,8 +8,8 @@ import { story } from '../../../story.model';
 })
 export class StoryService {
 
-  private apiUrl = 'http://localhost:3000/';
-  private Url = 'http://localhost:3000/api/';
+  private apiUrl = 'https://marathii-backend.onrender.com';
+  private Url = 'https://marathii-backend.onrender.com/api/';
 
     constructor(private http: HttpClient) {}
 
