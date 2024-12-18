@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var storyModel = require('../models/story');
+const port = process.env.PORT || 4000;
 
 
 router.get('/', async (req, res) => {
@@ -51,5 +52,9 @@ router.put('/update/:_id', async (req, res) => {
     res.status(500).json({ message: 'Error updating story' });
   }
 });
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 module.exports = router;
