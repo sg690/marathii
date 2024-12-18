@@ -1,0 +1,88 @@
+/* Footer styles */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* Footer sections */
+.footer-section {
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; /* Adjust width for 3 sections */
+  box-sizing: border-box;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Advertisement styles */
+.ad {
+  background-color: #f1f1f1;
+  border: 1px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.ad-1 {
+  background-color: #f0f8ff;
+}
+
+.ad-2 {
+  background-color: #fffaf0;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    width: 100%;                /* Full width */
+    position: fixed;            /* Fixed position */
+    bottom: 0;                  /* Position it at the bottom */
+    left: 0;                    /* Align to the left */
+    background-color: #ecf0f1;  /* Optional: Set a background color */
+    padding: 10px 20px;         /* Optional: Add padding */
+    text-align: center;         /* Center the text */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+  }
+}

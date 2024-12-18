@@ -1,0 +1,16 @@
+<div class="container">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+  
+    <!-- Main Content -->
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul class="category-list">
+        <li *ngFor="let category of categories">
+          <a (click)="onCategoryClick(category)">{{ category }}</a>
+        </li>
+      </ul>
+    </div> 
+    
+  </div>
+  

@@ -1,0 +1,92 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ebe8e8; /* Changed background color */
+  color: black; /* Set all text color to black */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Sidebar 1/3, Results 2/3 */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #ffffff; /* Change from #ecf0f1 to white */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: black; /* Changed text color to black */
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black; /* Changed link color to black */
+}
+
+.sidebar a:hover {
+  color: #1abc9c; /* Keep hover color for links */
+  text-decoration: underline;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 10px;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #34495e;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.category-list a:hover {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+/* Main Content styles */
+.app-sidebar {
+  flex: 3; /* Main content takes more space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    min-width: auto;
+    height: auto; /* Adjust height for small screens */
+    position: relative; /* Disable sticky behavior */
+  }
+}

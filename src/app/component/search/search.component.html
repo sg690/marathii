@@ -1,0 +1,31 @@
+<div class="container">
+  <app-sidebar></app-sidebar>
+
+  <div class="stories-container">
+    <div class="results-header">
+      <h2>Search Results for "{{ searchQuery }}"</h2>
+    </div>
+
+    <div *ngIf="filteredStories.length > 0; else noResults" class="card-container">
+      <div *ngFor="let story of filteredStories" class="story-card">
+        <div class="card-header">
+          <h3 class="card-title">{{ story.title }}</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-date">Published on: {{ story.date }}</p>
+          <p class="card-excerpt">{{ truncateContent(story.content) }}</p>
+        </div>
+        <div class="card-footer">
+          <button (click)="navigateToStory(story._id)" class="read-more">Read More</button>
+          <p class="card-category">Category: <span>{{ story.category }}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noResults>
+      <div class="no-results">
+        <p>No results found for your search.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

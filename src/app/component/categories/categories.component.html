@@ -1,0 +1,18 @@
+<div class="categories-container">
+
+    <!-- <app-sidebar></app-sidebar> -->
+    
+    <h2>Stories in Category: {{ category }}</h2>
+    <div *ngIf="filteredStories.length > 0; else noStories">
+      <div *ngFor="let story of filteredStories" class="story-card">
+        <h3>{{ story.title }}</h3>
+        <p>{{ story.content }}</p>
+        <p><strong>Author:</strong> {{ story.authorName }}</p>
+        <p><strong>Date:</strong> {{ story.date }}</p>
+      </div>
+    </div>
+    <ng-template #noStories>
+      <p>No stories found in this category.</p>
+    </ng-template>
+  </div>
+  

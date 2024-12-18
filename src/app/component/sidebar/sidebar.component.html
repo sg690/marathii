@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <h2>Categories</h2>
+  <ul class="category-list">
+    <li *ngFor="let category of topCategories">
+      <!-- Navigate to the search page with the selected category -->
+      <a (click)="onCategoryClick(category)">{{ category }}</a>
+    </li>
+  </ul>
+
+  <h2>Trending Stories</h2>
+  <ul class="trending-list">
+    <li *ngFor="let story of trendingStories">
+      <!-- Navigate to the story details page -->
+      <a (click)="navigateToStory(story._id)">{{ story.title }}</a>
+    </li>
+  </ul>
+
+  <h2>New Posts</h2>
+  <ul class="new-posts-list">
+    <li *ngFor="let story of recentStories">
+      <!-- Navigate to the story details page -->
+      <a (click)="navigateToStory(story._id)">{{ story.title }}</a>
+    </li>
+  </ul>
+</div>

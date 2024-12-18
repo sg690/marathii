@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+  
+    <!-- Main Content Section -->
+    <div class="stories-container">
+      <h2>Trending Stories</h2>
+      <div class="card-container">
+        <div class="card" *ngFor="let story of AlltrendingStories">
+          <h3 class="card-title">{{ story.title }}</h3>
+          <p class="card-date">Published on: {{ story.date | date: 'dd/MM/yyyy' }}</p>
+        <p class="card-excerpt">{{ truncateContent(story.content) }}</p> <!-- Truncate content here -->
+        <button (click)="navigateToStory(story._id)" class="read-more">Read More</button>
+        <p class="card-category">Category: <span>{{ story.category }}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
